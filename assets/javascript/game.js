@@ -15,14 +15,28 @@ $(document).ready(function() {
     var playerCounter = 0;
 
     //buttons
-    $("#blue_gem").click();
-    $("#green_gem").click();
-    $("#red_gem").click();
-    $("#yellow_gem").click();
+    $("#blue_gem").on('click', function() {
+        playerCounter = playerCounter + crystalCheck1;
+        $("#playerScore").text("Your total score is: " + playerCounter);
+    });
+    $("#green_gem").on('click', function() {
+        playerCounter = playerCounter + crystalCheck2;
+        $("#playerScore").text("Your total score is: " + playerCounter);
+    });
+    $("#red_gem").on('click', function() {
+        playerCounter = playerCounter + crystalCheck3;
+        $("#playerScore").text("Your total score is: " + playerCounter);
+    });
+    $("#yellow_gem").on('click', function() {
+        playerCounter = playerCounter + crystalCheck4;
+        $("#playerScore").text("Your total score is: " + playerCounter);
+    });
 
     //It usually doesn't matter how you win or lose, but it does here
-    $("#win").text(win);
-    $("#lose").text(lose);
+    $("#win").text("Win: " + win);
+    $("#lose").text("Lose: " + lose);
+    
+    $("#randomNumber").text(computerCheck);
 
     function reset() {
         computerCheck = Math.floor(Math.random() * 75) +25;
@@ -34,18 +48,18 @@ $(document).ready(function() {
         $("#randomNumber").text(computerCheck)
     }
 
-    function win() {
-        alert("You Win!")
-        win++;
-        $("#win").text(win);
-        reset();
-    }
-
-    function lose() {
-        alert("Bummer. You lost.")
-        lose++;
-        $("#lose").text(lose);
-        reset();
+    function winOrLose() {
+        if (computerCheck === playerCounter) {
+            alert("You Win!")
+            win++;
+            $("#win").text("Win: " + win);
+            reset();
+        } else {
+            alert("Bummer. You lost.")
+            lose++;
+            $("#lose").text("Lose: " + lose);
+            reset();
+        }
     }
 
     
