@@ -48,8 +48,10 @@ $(document).ready(function() {
         $("#randomNumber").text(computerCheck)
     }
 
+    //Might have to separate out to different functions and call them under buttons OR
+    //make an exception to not do anything if score is 0
     function winOrLose() {
-        if (computerCheck === playerCounter) {
+        if (computerCheck == playerCounter) {
             alert("You Win!")
             win++;
             $("#win").text("Win: " + win);
@@ -62,7 +64,7 @@ $(document).ready(function() {
         }
     }
 
-    
+    winOrLose();
 
 
 
