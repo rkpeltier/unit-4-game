@@ -8,11 +8,12 @@ body {
 
 /* Title of Game */
 h1 {
-    padding: 0;
-    margin: 0;
+    padding: 10px 10px 10px 10px;
+    margin:auto;
     text-align: center;
+    font-family: 'Press Start 2P', cursive;
     color: whitesmoke;
-    font-size: 60px;
+    font-size: 40px;
     background-color: teal;
 }
 
@@ -55,4 +56,20 @@ h1 {
     padding: 10px;
     width: 50%;
     color: white;
+    background-color: teal;
+}
+
+#playerCurrentScore {
+    margin: auto;
+    padding: 10px;
+    width: 50%;
+    color: white;
+    background-color: #11496b;
+}
+
+#scoreBox {
+    margin: auto;
+    padding: 10px 6px 10px 6px;
+    width: 50%;
+    background-color: lavender;
 }

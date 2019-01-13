@@ -6,10 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <title>Unit 4 Game</title>
 </head>
 <body>
+    <!--Name of the Game-->
     <h1>Crystal Collector</h1>
+    <!--Rules Div-->
     <div id="gameRules">
         <p class="info">You'll be given a random number at the start of the game.</p>
         <p class="info">There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
@@ -17,18 +20,31 @@
         <p class="info">The value of each crystal is hidden until you click on it.</p>
         <p class="info">Each time the game starts the game will change the values of each crystal.</p>
     </div>
+    <!--Computer Guess Div-->
     <div id="randomNumber"></div>
+    
     <div id="scoreBox"></div>
+
+    <!--Clickable Crystals-->
     <div id="crystalBox">
         <img id="blue_gem" class="crystalImage" src="assets/images/blue_gem.png">
         <img id="green_gem" class="crystalImage" src="assets/images/green_gem.png">
         <img id="red_gem" class="crystalImage" src="assets/images/red_gem.png">
         <img id="yellow_gem" class="crystalImage" src="assets/images/yellow_gem.png">
     </div>
+
+    <!--To house crystal guesses-->
     <div id="scoreText">
-        <p>Your Total Score Is:</p>
+        <p id="playerScore">Your Total Score Is:</p>
     </div>
-    <div id="playerCurrentScore"></div>
+
+    <!--Wins and Losses here-->
+    <div id="playerCurrentScore">
+        <p id="win">Win:</p>
+        <p id="lose">Lose:</p>
+    </div>
+
+    <!--Jquery Files-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/game.js"></script> 
 </body>
