@@ -17,22 +17,26 @@ $(document).ready(function() {
     //buttons
     $("#blue_gem").on('click', function() {
         playerCounter = playerCounter + crystalCheck1;
+        winLose();
         $("#playerScore").text("Your total score is: " + playerCounter);
     });
     $("#green_gem").on('click', function() {
         playerCounter = playerCounter + crystalCheck2;
+        winLose();
         $("#playerScore").text("Your total score is: " + playerCounter);
     });
     $("#red_gem").on('click', function() {
         playerCounter = playerCounter + crystalCheck3;
+        winLose();
         $("#playerScore").text("Your total score is: " + playerCounter);
     });
     $("#yellow_gem").on('click', function() {
         playerCounter = playerCounter + crystalCheck4;
+        winLose();
         $("#playerScore").text("Your total score is: " + playerCounter);
     });
 
-    //It usually doesn't matter how you win or lose, but it does here
+    //Win/Lose text and display
     $("#win").text("Win: " + win);
     $("#lose").text("Lose: " + lose);
     
@@ -44,29 +48,24 @@ $(document).ready(function() {
         crystalCheck2 = Math.floor(Math.random() * 15) +1;
         crystalCheck3 = Math.floor(Math.random() * 15) +1;
         crystalCheck4 = Math.floor(Math.random() * 15) +1;
-        $("#playerScore").text(playerCounter)
-        $("#randomNumber").text(computerCheck)
+        playerCounter = 0;
+        $("#randomNumber").text(computerCheck);
     }
 
-    //Might have to separate out to different functions and call them under buttons OR
-    //make an exception to not do anything if score is 0
-    function winOrLose() {
+    //Win and Lose function
+    function winLose() {
         if (computerCheck == playerCounter) {
             alert("You Win!")
             win++;
             $("#win").text("Win: " + win);
             reset();
-        } else {
+        } else if (computerCheck < playerCounter) {
             alert("Bummer. You lost.")
             lose++;
             $("#lose").text("Lose: " + lose);
             reset();
         }
     }
-
-    winOrLose();
-
-
 
 
 }) 
