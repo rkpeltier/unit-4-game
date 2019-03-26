@@ -1,12 +1,13 @@
 $(document).ready(function() {
 
     //Computer's randomizer
-    var computerCheck = Math.floor(Math.random() * 75) +25;
+    var computerCheck = Math.floor(Math.random() * 75 + 25);
+
     //Gem number randomizer
-    var crystalCheck1 = Math.floor(Math.random() * 15) +1;
-    var crystalCheck2 = Math.floor(Math.random() * 15) +1;
-    var crystalCheck3 = Math.floor(Math.random() * 15) +1;
-    var crystalCheck4 = Math.floor(Math.random() * 15) +1;
+    var crystalCheck1 = Math.floor(Math.random() * 15 + 1);
+    var crystalCheck2 = Math.floor(Math.random() * 15 + 1);
+    var crystalCheck3 = Math.floor(Math.random() * 15 + 1);
+    var crystalCheck4 = Math.floor(Math.random() * 15 + 1);
 
     //Win and Lose variables
     var win = 0;
