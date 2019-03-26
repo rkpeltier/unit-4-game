@@ -79,3 +79,45 @@ h1 {
     font-size: 46px;
     background-color: lavender;
 }
+
+/* Media Queries */
+
+/* Large Screen */
+@media only screen  and (min-width : 1824px) {
+    #crystalBox {
+        margin: auto;
+        padding: 0px 10px;
+        width: 50%;
+        background-color: #11496b;
+    }
+    .crystalImage {
+        margin:auto;
+        position: relative;
+        left: 70px;
+        padding: 5px 10px 5px 10px;
+        height: 100px;
+        width: 100px;
+    }
+}
+
+/* Medium for desktops and laptops Screen */
+
+@media only screen  and (min-width : 1224px) {
+    #crystalBox {
+        margin: auto;
+        padding: 0px 10px;
+        width: 50%;
+        background-color: #11496b;
+    }
+    .crystalImage {
+        margin:auto;
+        position: relative;
+        left: 70px;
+        padding: 5px 10px 5px 10px;
+        height: 100px;
+        width: 100px;
+    }
+}
+        
+
+/* Not mobile compatible at this time */
