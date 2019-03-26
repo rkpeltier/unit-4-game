@@ -9,3 +9,5 @@ Math.floor method is used to generated the times and tied to on click events.
 Pixel art by me.
 
 https://rkpeltier.github.io/unit-4-game/
+
+![app-screenshot](https://user-images.githubusercontent.com/45191442/55036319-7d48d980-4fd7-11e9-9a27-35837ca53d9c.PNG)
